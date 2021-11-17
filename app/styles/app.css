@@ -1,0 +1,114 @@
+:root {
+  --black: rgb(17, 11, 34);
+  --blue-dark: rgb(81, 140, 151);
+  --blue-light: rgb(111, 173, 185);
+  --blue: rgb(107, 171, 184);
+  --diamond: rgb(147, 157, 196);
+  --ember-dark: rgb(207, 73, 46);
+  --ember: rgb(225, 93, 68);
+  --gray-dark: rgb(33, 26, 51);
+  --gray-light: rgb(226, 220, 211);
+  --gray: rgb(106, 108, 135);
+  --orange-light: rgb(243, 172, 106);
+  --orange-xlight: rgb(242, 193, 170);
+  --orange: rgb(247, 165, 89);
+  --paragraph-dark: rgb(180, 171, 197);
+  --paragraph-light: rgb(233, 227, 243);
+  --paragraph: rgb(209, 201, 224);
+  --primary-dark: rgb(6, 3, 14);
+  --primary-light: rgb(33, 26, 51);
+  --primary-xlight: rgb(57, 48, 78);
+  --primary: rgb(17, 11, 34);
+  --purple-light: rgb(162, 147, 192);
+  --purple: rgb(153, 139, 184);
+  --secondary-paragraph: rgb(77, 75, 73);
+  --secondary: rgb(255, 250, 245);
+  --silver: rgb(159, 161, 167);
+  --white: rgb(255, 250, 245);
+  
+}
+*,*:after {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--primary);
+  color: var(--white);
+  display: flex;
+  flex-flow: row wrap;
+  font-family: 'Rosario', sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+header, main, footer {
+  padding: 0 1rem;
+  width: 100%;
+}
+main {
+  min-height: 90vh;
+}
+main article {
+  margin: 0 auto;
+  max-width: 100%;
+}
+@media screen and (min-width: 40em) {
+  main article {
+    width: 90%;
+    max-width: 1280px;
+  }
+}
+
+footer {
+  align-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+footer p {
+  border-top: 1px solid var(--blue-light);
+  padding: 1em;
+}
+
+h1 {
+  align-content: center;
+  background-color: transparent;
+  color: var(--ember);
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 5.653rem; /* augmented fourth typographic scale */
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1;
+}
+
+h2 {
+  background-color: transparent;
+  color: var(--purple);
+  font-size: 3.998rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 2.827rem;
+}
+
+p {
+  font-size: 1.414rem;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--orange);
+}
+a:visited {
+  color: var(--orange-light);
+}
+
+.iframe-video {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}

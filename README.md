@@ -1,7 +1,6 @@
 # why-ember
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This website provides some reasons why you might want to chose the Ember JS framework for your next project.
 
 ## Prerequisites
 
@@ -16,7 +15,7 @@ You will need the following things properly installed on your computer.
 
 * `git clone <repository-url>` this repository
 * `cd why-ember`
-* `npm install`
+* `yarn`
 
 ## Running / Development
 
