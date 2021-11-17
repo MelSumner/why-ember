@@ -4,6 +4,8 @@
 
 This website provides some reasons why you might want to chose the Ember JS framework for your next project.
 
+Do you have an idea for content that should be here? Pull requests are welcome!
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
