@@ -1,5 +1,7 @@
 # why-ember
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/67183055-7b59-45ef-bf39-726883ebcd5e/deploy-status)](https://app.netlify.com/sites/whyember/deploys)
+
 This website provides some reasons why you might want to chose the Ember JS framework for your next project.
 
 ## Prerequisites
