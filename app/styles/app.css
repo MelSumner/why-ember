@@ -1,8 +1,9 @@
 :root {
   --black: rgb(17, 11, 34);
-  --blue-dark: rgb(81, 140, 151);
+  /* --blue-dark: rgb(81, 140, 151);
   --blue-light: rgb(111, 173, 185);
-  --blue: rgb(107, 171, 184);
+  --blue: rgb(107, 171, 184) */
+  --blue: #03dac6;
   --diamond: rgb(147, 157, 196);
   --ember-dark: rgb(207, 73, 46);
   --ember: rgb(225, 93, 68);
@@ -25,19 +26,25 @@
   --secondary: rgb(255, 250, 245);
   --silver: rgb(159, 161, 167);
   --white: rgb(255, 250, 245);
-  
+  --font-body: 'Assistant', 'Interface', sans-serif;
+  --font-header: 'Assistant', sans-serif;
+  --font-code: 'Codelia', monospace;
 }
 *,*:after {
   box-sizing: border-box;
+}
+html {
+  font-size: 100%;
 }
 body {
   background-color: var(--primary);
   color: var(--secondary);
   display: flex;
   flex-flow: row wrap;
-  font-family: 'Rosario', sans-serif;
-  font-size: 18px;
-  line-height: 1.2;
+  font-family: var(--font-body);
+  font-size: 1.333rem;
+  font-weight: 400;
+  line-height: 1.75;
   margin: 0;
   padding: 0;
 }
@@ -48,12 +55,12 @@ header, main, footer {
 main {
   min-height: 90vh;
 }
-main article {
+main article, header h1 {
   margin: 0 auto;
   max-width: 100%;
 }
 @media screen and (min-width: 40em) {
-  main article {
+  main article, header h1 {
     width: 90%;
     max-width: 1280px;
   }
@@ -66,39 +73,44 @@ footer {
   justify-content: center;
 }
 footer p {
-  border-top: 1px solid var(--blue-light);
+  border-top: 1px solid var(--blue);
   padding: 1em;
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: var(--font-header);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
 h1 {
+  margin-top: 0;
+  font-size: 4.209rem;
   align-content: center;
   background-color: transparent;
   color: var(--ember);
   display: flex;
   flex-flow: row wrap;
-  font-size: 5.653rem; /* augmented fourth typographic scale */
-  font-weight: 600;
-  justify-content: center;
-  line-height: 1;
 }
 
 h2 {
+  font-size: 3.157rem;
   background-color: transparent;
-  color: var(--purple);
-  font-size: 3.998rem;
-  font-weight: 600;
-  line-height: 1;
-  margin-bottom: 0;
+  color: var(--blue);
 }
 
-h3 {
-  font-size: 2.827rem;
-}
+h3, .h3 {font-size: 2.369rem;}
 
-p {
-  font-size: 1.414rem;
-  line-height: 1.5;
-}
+h4, .h4 {font-size: 1.777rem;}
+
+h5, .h5 {font-size: 1.333rem;}
+
+small, .text_small {font-size: 0.75rem;}
 
 ul, ol {
   font-size: 1.414rem;
@@ -116,4 +128,43 @@ a:visited {
   display: flex;
   justify-content: center;
   margin: auto;
+}
+
+.we-card__container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+.we-card {
+  align-items: stretch;
+  justify-content: flex-start;
+  display: flex;
+  margin: 0;
+  border: 3px solid var(--blue);
+  flex-flow: row wrap;
+  flex: 1 1 25%;
+  border-radius: 6px;
+}
+.we-card dd {
+  background-color: transparent;
+  color: var(--ember);
+  font-size: 1.777rem;
+  height: fit-content;
+  line-height: 1;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  width: 100%;
+}
+.we-card dt {
+  width: 100%;
+  padding: 0 1rem 0.5rem;
+  line-height: 1.5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
 }
