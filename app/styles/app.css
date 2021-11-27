@@ -14,10 +14,10 @@
   --primary: rgb(17, 11, 34);
   --secondary: rgb(255, 250, 245);
   --white: rgb(255, 250, 245);
-  --font-body: 'Assistant', sans-serif;
-  --font-header: 'Assistant', sans-serif;
+  --font-body: 'Assistant', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-header: 'Assistant', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-code: 'Codelia', monospace;
-  --font-quote: 'Playfair Display', serif;
+  --font-quote: 'Playfair Display', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, serif;
 }
 *,*:after {
   box-sizing: border-box;
