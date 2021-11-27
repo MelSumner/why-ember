@@ -249,14 +249,13 @@ a:active {
   }
 }
 
-.highlight {
-  color: var(--blue);
-  font-style:italic;
-  text-decoration: underline;
-  margin-right: 4px;
-}
-
 .intro {
-  font-size: 1.777rem;
-  line-height: 1.4;
+  font-size: 1.333rem;
+  line-height: 1.2;
+}
+@media (min-width:75rem) {
+  .intro {
+    font-size: 1.777rem;
+    line-height: 1.4;
+  }
 }
