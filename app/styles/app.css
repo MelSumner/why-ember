@@ -6,8 +6,7 @@
   --gray-dark: rgb(33, 26, 51);
   --gray-light: rgb(226, 220, 211);
   --gray: rgb(106, 108, 135);
-  --orange-light: rgb(243, 172, 106);
-  --orange: rgb(247, 165, 89);
+  --orange: rgb(255, 149, 128);
   --paragraph-dark: rgb(180, 171, 197);
   --paragraph-light: rgb(233, 227, 243);
   --paragraph: rgb(209, 201, 224);
@@ -68,7 +67,7 @@ footer {
   justify-content: center;
 }
 footer p {
-  padding: 1em;
+  padding: 0.5em 0;
 }
 
 p {
@@ -114,7 +113,6 @@ h2 {
 }
 .border-bottom {
   border-bottom: 1px solid var(--paragraph-light);
-  padding-bottom: 0.5rem;
 }
 
 h3, .h3 {font-size: 1.777rem;}
@@ -143,7 +141,7 @@ a {
   color: var(--orange);
 }
 a:visited {
-  color: var(--orange-light);
+  color: var(--orange);
 }
 a:focus {
   /* use default browser focus */
