@@ -148,7 +148,7 @@ a:active {
 .we-card {
   align-items: stretch;
   border-radius: 6px;
-  border: 3px solid var(--blue);
+  border: 2px solid var(--blue);
   display: flex;
   flex-flow: row wrap;
   flex: 1 1 25%;
