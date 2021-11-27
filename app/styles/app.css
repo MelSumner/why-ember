@@ -17,7 +17,7 @@
   --font-body: 'Assistant', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-header: 'Assistant', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-code: 'Codelia', monospace;
-  --font-quote: 'Playfair Display', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, serif;
+  --font-quote: 'Domine', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, serif;
 }
 *,*:after {
   box-sizing: border-box;
@@ -84,7 +84,7 @@ h1 {
   display: flex;
   flex-flow: row wrap;
   font-size: 4.209rem;
-  font-weight: bold;
+  font-weight: 800;
   margin-top: 0;
   padding-top: 1rem;
 }
@@ -102,7 +102,7 @@ h2 {
 
 h3, .h3 {font-size: 2.369rem;}
 
-h4, .h4, .intro {font-size: 1.777rem;}
+h4, .h4 {font-size: 1.777rem;}
 
 h5, .h5 {font-size: 1.333rem;}
 
@@ -132,7 +132,7 @@ a:active {
 .iframe-video {
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin: 2rem auto 1rem;
   max-width: 100%;
 }
 
@@ -154,6 +154,7 @@ a:active {
   flex: 1 1 25%;
   justify-content: flex-start;
   margin: 0;
+  padding: 0 0 1rem 0;
 }
 .we-card dt {
   color: var(--paragraph-light);
@@ -164,6 +165,7 @@ a:active {
   margin: 0;
   padding: 0.5rem 1rem;
   width: 100%;
+  min-width: fit-content;
 }
 .we-card dd {
   align-items: stretch;
@@ -181,21 +183,35 @@ a:active {
   flex-flow: row wrap;
   font-family: var(--font-quote);
   padding: 1rem;
+  justify-content: center;
+  margin: 0.5rem 0 0;
+
 }
 .we-quote span {
-  color: var(--ember);
-  flex: 1 0 0;
-  font-family: cursive;
-  font-size: 100px;
-  line-height: 1;
-  padding: 0 1rem 0 0;
+  display: none;
 }
 .we-quote p {
   color: var(--paragraph-light);
-  flex: 1 0 95%;
-  font-size: 1.777rem;
+  font-size: 1.3rem;
   line-height: 1.2;
+  letter-spacing: 0.5px;
+}
 
+@media (min-width: 60rem) {
+  .we-quote span {
+    color: var(--ember);
+    display: inline-flex;
+    flex: 1 0 0;
+    font-family: cursive;
+    font-size: 6rem;
+    line-height: 1;
+    padding: 0 1rem 0 0;
+  }
+  .we-quote p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    flex: 1 0 95%;
+  }
 }
 
 .highlight {
@@ -205,4 +221,9 @@ a:active {
   margin-right: 4px;
   /* font-weight: bold; */
   /* font-family: var(--font-quote); */
+}
+
+.intro {
+  font-size: 1.777rem;
+  line-height: 1.4;
 }
