@@ -211,7 +211,7 @@ a:active {
   font-family: var(--font-quote);
   padding: 1rem;
   justify-content: center;
-  margin: 0.5rem 0 0;
+  margin: 3rem 0 0;
 
 }
 .we-quote span {
@@ -222,10 +222,10 @@ a:active {
   font-size: 1.3rem;
   line-height: 1.2;
   letter-spacing: 0.5px;
-  margin-bottom: 0;
+  margin: 0;
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 75rem) {
   .we-quote {
     border: 1px solid transparent;
   }
@@ -234,7 +234,7 @@ a:active {
     display: inline-flex;
     flex: 1 0 0;
     font-family: cursive;
-    font-size: 6rem;
+    font-size: 4rem;
     line-height: 1;
     padding: 0 1rem 0 0;
   }
