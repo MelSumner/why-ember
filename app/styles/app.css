@@ -177,7 +177,7 @@ a:active {
   border: 2px solid var(--blue);
   display: flex;
   flex-flow: row wrap;
-  flex: 1 1 25%;
+  flex: 1 2 33%;
   justify-content: flex-start;
   margin: 0;
   padding: 0 0 1rem 0;
