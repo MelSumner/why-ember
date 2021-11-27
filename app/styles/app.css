@@ -53,7 +53,7 @@ header h1 {
   margin-right: auto;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 75em) {
   main article, header h1 {
     width: 90%;
     max-width: 1280px;
@@ -182,10 +182,10 @@ a:active {
   border: 2px solid var(--blue);
   display: flex;
   flex-flow: row wrap;
-  flex: 1 2 33%;
+  flex: 1 1 49%;
   justify-content: flex-start;
   margin: 0;
-  padding: 0 0 1rem 0;
+  padding: 1rem 0;
 }
 .we-card dt {
   color: var(--paragraph-light);
