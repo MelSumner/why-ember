@@ -42,6 +42,7 @@ header, main, footer {
 }
 main {
   min-height: 90vh;
+  padding-bottom: 3rem;
 }
 main article {
   margin: 0 auto;
@@ -140,7 +141,7 @@ small, .text_small {font-size: 0.75rem;}
 
 ul, ol {
   font-size: 1.414rem;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 a {
@@ -224,7 +225,7 @@ a:active {
 .we-quote p {
   color: var(--paragraph-light);
   font-size: 1.3rem;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.5px;
   margin: 0;
 }
