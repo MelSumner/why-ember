@@ -126,6 +126,15 @@ a {
 a:visited {
   color: var(--orange-light);
 }
+a:focus {
+  /* use default browser focus */
+}
+a:hover {
+  color: var(--ember);
+}
+a:active {
+  color: var(--ember-dark);
+}
 
 .iframe-video {
   display: flex;
@@ -153,8 +162,6 @@ a:visited {
   margin: 0;
 }
 .we-card dd {
-  background-color: transparent;
-  color: var(--ember);
   font-size: 1.777rem;
   font-weight: bold;
   height: fit-content;
@@ -173,13 +180,13 @@ a:visited {
 }
 
 .we-quote {
-  border-left: 4px solid var(--ember);
   display: flex;
   flex-flow: row wrap;
   font-family: var(--font-quote);
   padding: 1rem;
 }
 .we-quote span {
+  color: var(--ember);
   flex: 1 0 0;
   font-family: cursive;
   font-size: 100px;
