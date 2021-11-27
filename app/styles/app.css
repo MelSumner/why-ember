@@ -1,32 +1,20 @@
 :root {
   --black: rgb(17, 11, 34);
-  /* --blue-dark: rgb(81, 140, 151);
-  --blue-light: rgb(111, 173, 185);
-  --blue: rgb(107, 171, 184) */
   --blue: #03dac6;
-  --diamond: rgb(147, 157, 196);
   --ember-dark: rgb(207, 73, 46);
   --ember: rgb(225, 93, 68);
   --gray-dark: rgb(33, 26, 51);
   --gray-light: rgb(226, 220, 211);
   --gray: rgb(106, 108, 135);
   --orange-light: rgb(243, 172, 106);
-  --orange-xlight: rgb(242, 193, 170);
   --orange: rgb(247, 165, 89);
   --paragraph-dark: rgb(180, 171, 197);
   --paragraph-light: rgb(233, 227, 243);
   --paragraph: rgb(209, 201, 224);
-  --primary-dark: rgb(6, 3, 14);
-  --primary-light: rgb(33, 26, 51);
-  --primary-xlight: rgb(57, 48, 78);
   --primary: rgb(17, 11, 34);
-  --purple-light: rgb(162, 147, 192);
-  --purple: rgb(153, 139, 184);
-  --secondary-paragraph: rgb(77, 75, 73);
   --secondary: rgb(255, 250, 245);
-  --silver: rgb(159, 161, 167);
   --white: rgb(255, 250, 245);
-  --font-body: 'Assistant', 'Interface', sans-serif;
+  --font-body: 'Assistant', sans-serif;
   --font-header: 'Assistant', sans-serif;
   --font-code: 'Codelia', monospace;
   --font-quote: 'Playfair Display', serif;
@@ -105,11 +93,16 @@ h2 {
   background-color: transparent;
   color: var(--blue);
   font-size: 3.157rem;
+  font-weight: bold;
+}
+.border-bottom {
+  border-bottom: 1px solid var(--paragraph-light);
+  padding-bottom: 0.5rem;
 }
 
 h3, .h3 {font-size: 2.369rem;}
 
-h4, .h4 {font-size: 1.777rem;}
+h4, .h4, .intro {font-size: 1.777rem;}
 
 h5, .h5 {font-size: 1.333rem;}
 
@@ -146,7 +139,7 @@ a:active {
   align-items: stretch;
   display: flex;
   flex-flow: row wrap;
-  gap: 0.5rem;
+  gap: 0.75rem;
   justify-content: space-evenly;
   margin: 0 auto;
   padding: 0;
@@ -161,7 +154,8 @@ a:active {
   justify-content: flex-start;
   margin: 0;
 }
-.we-card dd {
+.we-card dt {
+  color: var(--paragraph-light);
   font-size: 1.777rem;
   font-weight: bold;
   height: fit-content;
@@ -170,11 +164,13 @@ a:active {
   padding: 0.5rem 1rem;
   width: 100%;
 }
-.we-card dt {
+.we-card dd {
   align-items: stretch;
+  color: var(--paragraph);
   display: flex;
   justify-content: flex-start;
   line-height: 1.5;
+  margin: 0;
   padding: 0 1rem 0.5rem;
   width: 100%;
 }
@@ -194,7 +190,18 @@ a:active {
   padding: 0 1rem 0 0;
 }
 .we-quote p {
+  color: var(--paragraph-light);
   flex: 1 0 95%;
   font-size: 1.777rem;
   line-height: 1.2;
+
+}
+
+.highlight {
+  color: var(--blue);
+  font-style:italic;
+  text-decoration: underline;
+  margin-right: 4px;
+  font-weight: bold;
+  /* font-family: var(--font-quote); */
 }
