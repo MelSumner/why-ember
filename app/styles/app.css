@@ -62,12 +62,12 @@ header h1 {
 
 footer {
   align-content: center;
+  border-top: 1px solid var(--gray);
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 footer p {
-  border-top: 1px solid var(--blue);
   padding: 1em;
 }
 
@@ -222,6 +222,7 @@ a:active {
   font-size: 1.3rem;
   line-height: 1.2;
   letter-spacing: 0.5px;
+  margin-bottom: 0;
 }
 
 @media (min-width: 60rem) {
