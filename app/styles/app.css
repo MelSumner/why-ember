@@ -185,7 +185,7 @@ a:active {
   padding: 1rem 0;
 }
 .we-card dt {
-  color: var(--paragraph-light);
+  color: var(--white);
   font-size: 1.777rem;
   font-weight: bold;
   height: fit-content;
@@ -197,7 +197,7 @@ a:active {
 }
 .we-card dd {
   align-items: stretch;
-  color: var(--paragraph);
+  color: var(--secondary);
   display: flex;
   justify-content: flex-start;
   line-height: 1.5;
