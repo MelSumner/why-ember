@@ -1,3 +1,10 @@
 <blockquote class="we-quote">
   <span role="presentation">"</span><p>{{@quoteText}}</p>
+  <cite>
+    {{#if this.cite}}
+      <a href="{{this.citeUrl}}">{{this.cite}}</a>
+    {{else}}
+    - An Ember Community Member
+    {{/if}}
+  </cite>
 </blockquote>
