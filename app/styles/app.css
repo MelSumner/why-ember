@@ -184,7 +184,7 @@ a:active {
   border-radius: 6px;
   border: 2px solid var(--blue);
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
   flex: 1 1 49%;
   justify-content: flex-start;
   margin: 0;
