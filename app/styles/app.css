@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;800&family=Domine&family=Klee+One&display=swap');
+
 :root {
   --black: rgb(17, 11, 34);
   --blue: #03dac6;
@@ -13,11 +15,12 @@
   --primary: rgb(17, 11, 34);
   --secondary: rgb(255, 250, 245);
   --white: rgb(255, 250, 245);
-  --font-body: 'Assistant', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-header: 'Assistant', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Assistant', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  --font-header: 'Assistant', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
   --font-code: 'Codelia', monospace;
-  --font-quote: 'Domine', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, serif;
+  --font-quote: 'Domine', -apple-system, BlinkMacSystemFont, Roboto, serif;
 }
+
 *,*:after {
   box-sizing: border-box;
 }
@@ -99,6 +102,7 @@ h1 {
     font-size: 4.209rem;
   }
 }
+
 h2 {
   background-color: transparent;
   color: var(--blue);
@@ -108,15 +112,6 @@ h2 {
 @media (min-width:75rem) {
   h2 {
     font-size: 3.157rem;
-  }
-}
-.border-bottom {
-  border-bottom: 1px solid var(--paragraph-light);
-  padding-bottom: 0.5rem;
-}
-@media (min-width:75rem) {
-  .border-bottom {
-    padding-bottom: 0;
   }
 }
 
@@ -129,13 +124,24 @@ h3, .h3 {font-size: 1.777rem;}
 
 h4, .h4 {font-size: 1.333rem;}
 @media (min-width:75rem) {
-  h3 {
+  h4 {
     font-size: 1.777rem;
   }
 }
+
 h5, .h5 {font-size: 1.333rem;}
 
 small, .text_small {font-size: 0.75rem;}
+
+.border-bottom {
+  border-bottom: 1px solid var(--paragraph-light);
+  padding-bottom: 0.5rem;
+}
+@media (min-width:75rem) {
+  .border-bottom {
+    padding-bottom: 0;
+  }
+}
 
 ul, ol {
   padding-left: 1.5rem;
@@ -198,13 +204,17 @@ a:active {
 .we-card dd {
   align-items: stretch;
   color: var(--secondary);
-  display: flex;
-  justify-content: flex-start;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start; */
   line-height: 1.5;
   margin: 0;
   padding: 0 1rem 0.5rem;
   width: 100%;
 }
+/* .we-card dd > code {
+  display: inline-flex;
+} */
 
 .we-quote {
   border-left: 4px solid var(--ember);
@@ -236,6 +246,9 @@ a:active {
   letter-spacing: 1px;
   text-transform: uppercase;
   width: 100%;
+}
+.we-quote cite::before {
+  content: "-"
 }
 
 @media (min-width: 75rem) {
@@ -279,11 +292,14 @@ pre {
   overflow: auto;
   padding: 1rem;
 }
-code {
+pre code {
   font-size: 1rem;
 }
 @media (min-width:75rem) {
-  code {
+  pre code {
     font-size: 1.333rem;
   }
+}
+dd > code {
+  color: var(--blue);
 }
