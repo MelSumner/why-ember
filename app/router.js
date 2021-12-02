@@ -6,4 +6,12 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-Router.map(function () {});
+Router.map(function () {
+  this.route('index', { path: '/' });
+  this.route('ember-for-react-developers');
+  this.route('addon-awards', function () {});
+
+  this.route('addons', function () {
+    this.route('2021');
+  });
+});
