@@ -366,10 +366,28 @@ dd > code {
 /* Grids with expanding full-width rows */
 .grid {
 	display: grid;
-  gap: 0;
+  gap: 1rem;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fit, 49%);
+  grid-template-columns: repeat(auto-fit, 19%);
 }
 .fullwidth {
   grid-column: 1 / -1;
+}
+
+ul.grid {
+  margin: 0;
+  padding: 0;
+}
+
+ul.grid li {
+  list-style: none;
+  display: flex;
+  flex-direction:column;
+  padding: 1rem;
+  border: 1px solid var(--ember);
+  border-radius: 6px;
+}
+
+ul.grid li > * {
+  margin: 1rem;
 }
