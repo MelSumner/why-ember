@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700;800&family=Permanent+Marker&family=Rosario:wght@400;600&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700;800&family=Domine&family=Special+Elite&display=swap');
 
 :root {
   --black: rgb(17, 11, 34);
@@ -292,7 +292,7 @@ a:active {
   color: var(--paragraph);
   display: flex;
   font-family: sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   justify-content: flex-end;
   letter-spacing: 1px;
   text-transform: uppercase;
