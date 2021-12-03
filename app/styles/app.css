@@ -379,14 +379,63 @@ ul.grid {
 }
 
 ul.grid li {
-  list-style: none;
-  display: flex;
-  flex-direction:column;
-  padding: 1rem;
-  border: 1px solid var(--ember);
   border-radius: 6px;
+  border: 1px solid var(--ember);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+.we-grid__title {
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  width: 100%;
+}
+li.fullwidth p {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 0;
+}
+li.fullwidth ol {
+  list-style: decimal;
+  margin: 0
+}
+li.fullwidth ol li {
+  border: none
 }
 
-ul.grid li > * {
-  margin: 1rem;
+.we-grid__button {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  background-color:var(--paragraph-dark);
+  color:var(--black);
+  border: 1px solid var(--paragraph-light);
+  border-radius: 3px;
+}
+.we-grid__button:hover {
+  cursor: pointer;
+}
+.we-grid__button:active {
+  transform: translateY(1px);
+}
+.addon-count {
+  background-color:rgb(180, 171, 197);
+  color:rgb(17, 11, 34);
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 50%;
 }
