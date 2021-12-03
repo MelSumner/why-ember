@@ -120,19 +120,7 @@ footer p {
   padding: 0.5em 0;
 }
 
-h2, h3, h4, h5 {
-  font-family: var(--font-header);
-  font-weight: 400;
-  line-height: 1;
-  margin: 1.38rem 0 1.38rem;
-}
-@media (min-width:75rem) {
-  h2, h3, h4, h5 {
-    line-height: 1.3;
-    margin: 3rem 0 1.38rem;
-  }
-}
-
+/* Headings */
 h1 {
   align-content: center;
   background-color: transparent;
@@ -153,6 +141,19 @@ h1 {
   }
 }
 
+h2, h3, h4, h5 {
+  font-family: var(--font-header);
+  font-weight: 400;
+  line-height: 1;
+  margin: 1.38rem 0 1.38rem;
+}
+@media (min-width:75rem) {
+  h2, h3, h4, h5 {
+    line-height: 1.3;
+    margin: 3rem 0 1.38rem;
+  }
+}
+
 h2 {
   background-color: transparent;
   color: var(--blue);
@@ -165,21 +166,19 @@ h2 {
   }
 }
 
-h3, .h3 {font-size: 1.777rem;}
+h3  {font-size: 1.777rem;}
 @media (min-width:75rem) {
   h3 {
     font-size: 2.369rem;
   }
 }
 
-h4, .h4 {font-size: 1.333rem;}
+h4 {font-size: 1.333rem;}
 @media (min-width:75rem) {
   h4 {
     font-size: 1.777rem;
   }
 }
-
-h5, .h5 {font-size: 1.333rem;}
 
 small, .text_small {font-size: 0.75rem;}
 
@@ -288,15 +287,17 @@ a:active {
   background-color: transparent;
   color: var(--paragraph);
   display: flex;
-  font-family: sans-serif;
-  font-size: 0.985rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: bold;
   justify-content: flex-end;
   letter-spacing: 1px;
   text-transform: uppercase;
   width: 100%;
 }
 .we-quote cite::before {
-  content: "-"
+  content: "- ";
+  font-weight: bold;
 }
 
 @media (min-width: 75rem) {
@@ -319,6 +320,7 @@ a:active {
   }
   .we-quote cite {
     padding: 0 1rem;
+    font-style:normal;
   }
 }
 
