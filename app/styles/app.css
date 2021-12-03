@@ -248,33 +248,30 @@ a:active {
   height: fit-content;
   line-height: 1;
   margin: 0;
+  min-width: fit-content;
   padding: 0.5rem 1rem;
   width: 100%;
-  min-width: fit-content;
 }
 .we-card dd {
   align-items: stretch;
   color: var(--secondary);
-  /* display: flex;
-  flex-direction: column;
-  justify-content: flex-start; */
   line-height: 1.5;
   margin: 0;
   padding: 0 1rem 0.5rem;
   width: 100%;
 }
-/* .we-card dd > code {
-  display: inline-flex;
-} */
+.we-card dd code {
+  font-size: 1rem;
+}
 
 .we-quote {
   border-left: 4px solid var(--ember);
   display: flex;
   flex-flow: row wrap;
   font-family: var(--font-quote);
-  padding: 0 0.5rem;
   justify-content: center;
   margin: 3rem 0 0;
+  padding: 0 0.5rem;
 
 }
 .we-quote span {
@@ -283,8 +280,8 @@ a:active {
 .we-quote p {
   color: var(--paragraph-light);
   font-size: 1.2rem;
-  line-height: 1.5;
   letter-spacing: 0.5px;
+  line-height: 1.5;
   margin: 0;
 }
 .we-quote cite {
@@ -292,7 +289,7 @@ a:active {
   color: var(--paragraph);
   display: flex;
   font-family: sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.985rem;
   justify-content: flex-end;
   letter-spacing: 1px;
   text-transform: uppercase;
