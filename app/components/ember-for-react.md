@@ -2,32 +2,23 @@ The [original document](https://www.notion.so/Ember-For-React-Developers-556a5d3
 
 Conceptually, both React and Ember can provide the solutions to the same problems. React has historically only been the component layer of applications, but that is changing as React evolves, and gradually adds more features that aim to make developing applications with React more pleasant. Ember offers a bit more out of the box, and aims to have a solution or pattern for most situations – with additional tooling, conventions, architectural patterns. The goal is to abstract away the menial differences between apps and reduce friction when switching projects.
 
-![React is only Components](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b1aed75b-df20-43ea-a901-45bfb3bf2ec1/Untitled.png)
-React is only Components
+![React is only Components](./images/efrd-001.png)
 
 React is *mostly* components. Interactions with external services such as [Redux](https://redux.js.org/), [GraphQL](https://graphql.org/) or [Orbit.js](https://orbitjs.com/) happen through components backed by a *[Context](https://reactjs.org/docs/context.html)* which we'll dive into in a bit.
 
-![Ember connects to data via Services](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dac0d333-6dd8-448f-8985-38d09b3e441f/Untitled.png)
+![Ember connects to data via Services](./images/efrd-002.png)
 
-Ember connects to data via Services
-
-Ember has architectural patterns for dealing with specific interactions. Third party services are always interfaced with an Ember *[Service](https://guides.emberjs.com/release/applications/services/)*. Services are used for a lot more than just 3rd party library integrations. A Service is a [singleton](https://en.wikipedia.org/wiki/Singleton_pattern); it lives for the duration of the application. Ember has object types other than services
+Ember has architectural patterns for dealing with specific interactions. Third party services are always interfaced with an Ember *[Service](https://guides.emberjs.com/release/applications/services/)*. Services are used for a lot more than just 3rd party library integrations. A Service is a [singleton](https://en.wikipedia.org/wiki/Singleton_pattern); it lives for the duration of the application. Ember has object types other than services.
 
 ## Components
 
 Both Ember and React use *components* as the foundational building block for web apps, and Ember and React components have a lot in common. There are a couple important differences between components in the two frameworks you should know about, though!
 
-<aside>
-💡 Before going further, you should familiarize yourself with Ember's Components! Check out the [Ember Guides on Components](https://guides.emberjs.com/release/components/defining-a-component/) for a deep dive!
-
-</aside>
+Before going further, please consider pausing and taking some time to familiarize yourself with Ember's Components! Check out the [Ember Guides on Components](https://guides.emberjs.com/release/components/defining-a-component/) for a deep dive!
 
 The first major difference is that React Components can be defined using either JavaScript *classes* or *functions*, whereas the equivalents in Ember are *class-backed components* (which use a JavaScript class) and *template-only components* (which do not use JavaScript at all). This separation is a reflection of the second major difference between React and Ember components: how the rendered HTML is defined. React components use [JSX](https://en.wikipedia.org/wiki/React_(JavaScript_library)#JSX) and Ember uses [Templates](https://guides.emberjs.com/release/templates/handlebars-basics/) – sometimes in addition to a backing JavaScript file.
 
-<aside>
-💡 Some of the reasons for using a templating language over "just JavaScript"™ are discussed here in this [video from ReactiveConf](https://www.youtube.com/watch?v=nXCSloXZ-wc&t=1441s). There are other reasons as well, but they are beyond the scope of this guide.
-
-</aside>
+Some of the reasons for using a templating language over "just JavaScript"™ are discussed here in this [video from ReactiveConf](https://www.youtube.com/watch?v=nXCSloXZ-wc&t=1441s). There are other reasons as well, but they are beyond the scope of this guide.
 
 Like React, Ember makes heavy use of ideas from both [functional programming](https://en.wikipedia.org/wiki/Functional_programming) and [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming), though you'll find they show up in different ways!
 
@@ -35,10 +26,7 @@ Like React, Ember makes heavy use of ideas from both [functional programming](ht
 
 #### Presentational or "Stateless" Component
 
-<aside>
-💡 Presentational components only display or format data. They do not have state, do not make requests, and do not cause side-effects within the app without being passed a function to do so.
-
-</aside>
+Presentational components only display or format data. They do not have state, do not make requests, and do not cause side-effects within the app without being passed a function to do so.
 
 Presentational components are one half of a common design pattern in component-driven interfaces, where behavior is separated from what displays the result of the behavior. These are most commonly referred to as container and presentational components. However, a container component with state does not need to exist in order to use a presentational component. A presentational component could be thought of as a [Pure Function](https://en.wikipedia.org/wiki/Pure_function) in that the output is always the same for any given set of inputs. The presentational component may have logic for controlling what is displayed when, but it does not maintain the state that backs the logic. Icon component libraries, such as those provided by [Font Awesome](https://github.com/FortAwesome) are entirely presentational.
 
@@ -70,11 +58,8 @@ export function Presentation({ message, response }) {
 
 In `presentation.jsx` the component receives two arguments which are then rendered. We see that in `invocation.jsx` those arguments are assigned to static values, so the rendered result will be:
 
-<aside>
-▶️ Obi Wan Kenobi: Hello There!
+Obi Wan Kenobi: Hello There!
 General Grievous: General Kenobi!!
-
-</aside>
 
 The same pattern would be written this way in Ember:
 
@@ -97,7 +82,6 @@ General Grievous: {{@response}}
 #### Container Component
 
 Container components provide functionality to the wrapping content without adding any markup to the DOM. These are also known as "Renderless Components". They may also be higher-order components, but in React, a Higher-Order Component is a little more specific than the Container component concept.
-
 
 The following example may be something used to manage the open or closed state of a modal.
 
@@ -155,7 +139,7 @@ export default class ModalState extends Component {
 
 ‌First though, there are a number of things different about this component than in the previous example. By default, there can be two files to a component, although this is not a requirement. In the first example, there was just the template file, as there was no backing state. Here, we have a JavaScript file in addition to the template file. Ember's components are class-based, just like how React's stateful components used to be before hooks were introduced.
 
-Some important details to note about the component class definition
+Some important details to note about the component class definition:
 
 1. The component class must be the default export.
 2. The `@tracked` decorator *tracks* changes to the `isActive` property, so that when it changes, the parts of the template that use `isActive` will update. This convention means that if you *don't* use `@tracked` you can manage state without fear of causing unnecessary updates to the template.
@@ -284,7 +268,7 @@ Card.Content = CardContent;
 export default Card;
 ```
 
-Though, even with assigning sub-components to the default export, a user must rely on documentation to know about how these sub-components are accessed. In order to achieve the best sub-component suggestion you'd have to user [render-props.](https://reactjs.org/docs/render-props.html) Render props are a technique of passing a prop to a component and invoking that as a‌
+Though, even with assigning sub-components to the default export, a user must rely on documentation to know about how these sub-components are accessed. In order to achieve the best sub-component suggestion you'd have to user [render-props.](https://reactjs.org/docs/render-props.html) Render props are a technique of passing a prop to a component and invoking that.‌
 
 ### Templates and JSX
 
@@ -384,7 +368,7 @@ Coming Soon! But TL;DR...Ember handles this for you, for the most part. If you w
 
 ### CSS-in-JS
 
-CSS-in-JS is an anti-pattern, and should be avoided. If you really want to do this, there's probably an ember addon for that.
+CSS-in-JS is an anti-pattern, and should be avoided. If you really want to do this, though, there's probably an ember addon for that.
 
 ## API / Data Management
 

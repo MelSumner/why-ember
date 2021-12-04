@@ -491,3 +491,11 @@ li.fullwidth p a.link-standalone {
   position: absolute;
   right: 0.25rem;
 }
+
+.has-markdown-doc p img {
+  border: 8px ​solid var(--blue);
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+}
