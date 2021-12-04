@@ -481,7 +481,7 @@ li.fullwidth p a.link-standalone {
 .we-grid__addon-count {
   align-items: flex-end;
   bottom: -1rem;
-  color:white;
+  color:#AB3D30;
   display: flex;
   font-family: 'Special Elite', monospace;
   font-size: 5rem;
@@ -489,7 +489,6 @@ li.fullwidth p a.link-standalone {
   justify-content: flex-end;
   line-height:1;
   margin: 0;
-  opacity: 15%;
   padding: 0;
   position: absolute;
   right: 0.25rem;
