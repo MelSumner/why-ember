@@ -1,0 +1,15 @@
+<li class="we-grid-item {{if this.isShowing 'isSelected'}}">
+  <p class="we-grid__title">{{@addonName}}</p>
+  <button type="button" class="we-grid__button" {{on "click" this.toggleShowing}} aria-label="Read More About {{@addonName}}"><span aria-hidden="true">Read More</span></button>
+  <span aria-hidden="true" class="we-grid__addon-count">{{@addonNum}}</span>
+</li>
+{{#if this.isShowing}}
+  <li class="fullwidth">
+    <div class="fullwidth__header-row">
+      <p><strong>Why we like {{@addonName}}:</strong></p>
+      <button type="button" class="fullwidth__button-close" {{on "click" this.toggleShowing}}>Close</button>
+    </div>
+    {{yield}}
+    <p><a href={{@addonUrl}} rel="external" class="link-standalone">GitHub repo for {{@addonName}}</a></p>
+  </li>
+{{/if}}
