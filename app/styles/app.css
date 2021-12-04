@@ -427,27 +427,23 @@ ul.grid li {
 ul.grid li.fullwidth {
   border-color: var(--blue);
   gap: 1rem;
-  /* the other padding is defined in ul.grid li */
-  padding-left: 2rem;
-  padding-right: 2rem;
-  
-
+  padding: 1.5rem;
 }
 
 li.fullwidth p {
-  display: flex;
-  justify-content: flex-start;
   margin: 0;
   padding: 0;
   width: 100%;
 }
-li.fullwidth ol {
-  list-style: decimal;
-  margin: 0
+li.fullwidth p a.link-standalone {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  width: 100%;
 }
-li.fullwidth ol li {
-  border: none
-}
+
 .fullwidth__header-row {
   display: flex;
   justify-content: space-between;
