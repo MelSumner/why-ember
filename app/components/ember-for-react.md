@@ -1,4 +1,6 @@
-The [original document](https://www.notion.so/Ember-For-React-Developers-556a5d343cfb4f8dab1f4d631c05c95b) has been published with permission, and modified slightly for this site.
+## React For Ember Developers
+
+Note: The [original document](https://www.notion.so/Ember-For-React-Developers-556a5d343cfb4f8dab1f4d631c05c95b) has been re-published with permission, and modified slightly for this site.
 
 Conceptually, both React and Ember can provide the solutions to the same problems. React has historically only been the component layer of applications, but that is changing as React evolves, and gradually adds more features that aim to make developing applications with React more pleasant. Ember offers a bit more out of the box, and aims to have a solution or pattern for most situations – with additional tooling, conventions, architectural patterns. The goal is to abstract away the menial differences between apps and reduce friction when switching projects.
 
