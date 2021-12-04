@@ -374,7 +374,7 @@ CSS-in-JS is an anti-pattern, and should be avoided. If you really want to do th
 
 ### Should components load or interact with data directly?
 
-It depends, but for the most part, it's fine. Ask on the Ember Discord server for more information about this.
+It depends, but for the most part, it's fine. Ask on the [Ember Discord server](https://discord.gg/emberjs) for more information about this.
 
 ### Does Ember have an equivalent of PropTypes?
 
