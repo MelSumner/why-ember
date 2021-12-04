@@ -69,6 +69,7 @@
     "edition": "octane"
   },
   "dependencies": {
+    "ember-cli-netlify": "^0.4.1",
     "ember-test-helpers": "^0.6.3"
   }
 }
