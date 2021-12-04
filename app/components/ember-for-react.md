@@ -256,7 +256,7 @@ Contextual components are useful when you have a set of components that need to 
 </Card>
 ```
 
-This can somewhat be faked in React's component system, as the components are nothing more than module exports. We can tack on the related components as static properties to the main export of a component. [Kent C Dodds calls these "Compound Components".](https://kentcdodds.com/blog/compound-components-with-react-hooks)
+This can somewhat be faked in React's component system, as the components are nothing more than module exports. We can tack on the related components as static properties to the main export of a component. [See "Compound Components"](https://kentcdodds.com/blog/compound-components-with-react-hooks)
 
 ```jsx
 // imports and component definitions omitted
@@ -370,15 +370,11 @@ Coming Soon! But TL;DR...Ember handles this for you, for the most part. If you w
 
 CSS-in-JS is an anti-pattern, and should be avoided. If you really want to do this, though, there's probably an ember addon for that.
 
-## API / Data Management
-
-Coming Soon.
-
 ## Common Questions (with answers)
 
 ### Should components load or interact with data directly?
 
-It depends, but for the most part, it's fine. TODO: explain more.‌
+It depends, but for the most part, it's fine. Ask on the Ember Discord server for more information about this.
 
 ### Does Ember have an equivalent of PropTypes?
 
@@ -386,11 +382,7 @@ Sort of. There is an addon called [ember-prop-types](https://github.com/ciena-bl
 
 ### Why use Dependency Injection when I can "just use a module"?‌
 
-[Dependency Injection](https://guides.emberjs.com/release/applications/dependency-injection/)
-
-### How do I mock an import?
-
-Coming Soon.
+See: [Dependency Injection](https://guides.emberjs.com/release/applications/dependency-injection/)
 
 ### Why can't I use Jest for testing?
 
@@ -472,7 +464,7 @@ Why would you want to use ember-data if your API doesn't immediately work by def
 
 From the official Ember guides on ember-data: [Customizing Adapters](https://guides.emberjs.com/release/models/customizing-adapters/) & [Customizing Serializers](https://guides.emberjs.com/release/models/customizing-serializers/)
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/68550073-43f6-4c09-952c-aa827ef33faf/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/68550073-43f6-4c09-952c-aa827ef33faf/Untitled.png)
+![Adapters and Serializers](./images/efrd-003.png)
 
 ### Can I use GraphQL?
 
