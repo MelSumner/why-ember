@@ -402,13 +402,13 @@ ul.grid {
 
 ul.grid li {
   border-radius: 6px;
-  border: 18px solid var(--gray-light);
+  border: 12px solid var(--gray-light);
   display: flex;
   flex-flow: row wrap;
+  gap: 6rem;
   justify-content: space-between;
   list-style: none;
   padding: 0.5rem;
-  gap: 3rem;
 }
 .we-grid-item {
   position: relative;
