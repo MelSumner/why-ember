@@ -159,7 +159,7 @@ h2, h3, h4, h5 {
 
 h2 {
   background-color: transparent;
-  color: var(--blue);
+  color: var(--white);
   font-size: 2.369rem;
   font-weight: bold;
 }
@@ -340,7 +340,7 @@ a:active {
 
 pre {
   border-radius: 0.6rem;
-  border: 1px solid var(--blue);
+  border: 2px solid var(--blue);
   height: auto;
   overflow: auto;
   padding: 1rem;
@@ -356,14 +356,6 @@ pre code {
 dd > code {
   color: var(--blue);
 }
-
-/* .we-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
-} */
 
 /* Grids with expanding full-width rows */
 .grid {
@@ -405,17 +397,17 @@ ul.grid li {
   border: 12px solid var(--gray-light);
   display: flex;
   flex-flow: row wrap;
-  gap: 6rem;
+  gap: 4rem;
   justify-content: space-between;
   list-style: none;
-  padding: 0.5rem;
+  padding: 4rem 0.5rem 0.5rem;
 }
 .we-grid-item {
   position: relative;
 }
 .we-grid-item.isSelected {
-  border-color: var(--blue);
-  color: var(--blue);
+  border-color: var(--orange);
+  color: var(--white);
 }
 .we-grid__title {
   align-self: flex-start;
@@ -429,7 +421,7 @@ ul.grid li {
 }
 
 ul.grid li.fullwidth {
-  border-color: var(--blue);
+  border-color: var(--orange);
   gap: 1rem;
   padding: 1.5rem;
 }
@@ -456,9 +448,9 @@ li.fullwidth p a.link-standalone {
 .fullwidth__button-close, 
 .we-grid__button {
   align-items: center;
-  background-color: #13384c;
+  background-color: #44375d;
   border-radius: 0.5rem;
-  border: 3px solid var(--blue);
+  border: 3px solid var(--white);
   color:var(--white);
   display: flex;
   justify-content: center;
@@ -472,7 +464,7 @@ li.fullwidth p a.link-standalone {
 }
 .fullwidth__button-close:focus,
 .we-grid__button:focus {
-  border-color: #18b9b9;
+  border-color: var(--orange);
   outline-offset: 4px;
 }
 .fullwidth__button-close:active,
@@ -481,11 +473,11 @@ li.fullwidth p a.link-standalone {
 }
 .we-grid__addon-count {
   align-items: flex-end;
-  bottom: -1rem;
+  bottom: -1.2rem;
   color:#AB3D30;
   display: flex;
   font-family: 'Special Elite', monospace;
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: bold;
   justify-content: flex-end;
   line-height:1;
