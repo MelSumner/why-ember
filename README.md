@@ -21,5 +21,5 @@ Thank you to the following folks who provided feedback or quotes, and were direc
 
 Some of the cool CSS features on the site are thanks to awesome tutorials on CSS Tricks:
 
-- [https://css-tricks.com/expandable-sections-within-a-css-grid/](https://css-tricks.com/expandable-sections-within-a-css-grid/)
+- [Expandable Sections Within a CSS Grid](https://css-tricks.com/expandable-sections-within-a-css-grid/)
 - [Responsive Layouts, Fewer Media Queries](https://css-tricks.com/responsive-layouts-fewer-media-queries/)
