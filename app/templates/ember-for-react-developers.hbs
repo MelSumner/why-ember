@@ -1,5 +1,156 @@
 {{page-title "Ember For React Developers"}}
-<article class="has-markdown-doc">
-  {{!-- <EmberForReact/> --}}
-  <p>Coming Soon!</p>
+
+<article class="content-text">
+<h2>Ember for React Developers</h2>
+
+<p>Note: The <a href="https://www.notion.so/Ember-For-React-Developers-556a5d343cfb4f8dab1f4d631c05c95b">original document</a> has been re-published with permission, and modified slightly for this site.</p>
+
+<p>Conceptually, both React and Ember can provide the solutions to the same problems. React has historically only been the component layer of applications, but that is changing as React evolves, and gradually adds more features that aim to make developing applications with React more pleasant. Ember offers a more out of the box, and aims to have a solution or pattern for most situations – with additional tooling, conventions, architectural patterns. The goal is to abstract away the menial differences between apps and reduce friction when switching projects.</p>
+
+<figure>
+  <img src="./images/efrd-001.png" alt="" role="presentation"/>
+  <figcaption>React is only Components</figcaption>
+</figure>
+
+<p>React is *mostly* components. Interactions with external services such as [Redux](https://redux.js.org/), [GraphQL](https://graphql.org/) or [Orbit.js](https://orbitjs.com/) happen through components backed by a *[Context](https://reactjs.org/docs/context.html)* which we'll dive into in a bit.</p>
+
+
+<figure>
+  <img src="./images/efrd-002.png" alt="" role="presentation" />
+  <figcaption>Ember connects to data via Services</figcaption>
+</figure>
+
+<p>Ember has architectural patterns for dealing with specific interactions. Third party services are always interfaced with an Ember <a href="https://guides.emberjs.com/release/applications/services/" rel="external">Service</a>. Services are used for a lot more than just 3rd party library integrations. A Service is a <a href="https://en.wikipedia.org/wiki/Singleton_pattern" rel="external">singleton</a> that lives for the duration of the application. Ember has object types other than services.
+</p>
+
+<h2>Components</h2>
+<p>Both Ember and React use components as the foundational building block for web apps, and Ember and React components have a lot in common. There are a couple important differences between components in the two frameworks you should know about, though!</p>
+
+
+<p>If you're not already familiar with Ember's concept of components, please take a bit and check out the official guides: https://guides.emberjs.com/release/components/defining-a-component/ </p>
+
+<p>
+The first major difference is that React Components can be defined using either JavaScript *classes* or *functions*, whereas the equivalents in Ember are *class-backed components* (which use a JavaScript class) and *template-only components* (which do not use JavaScript at all). This separation is a reflection of the second major difference between React and Ember components: how the rendered HTML is defined. React components use <a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)#JSX">JSX</a> and Ember uses <a href="https://guides.emberjs.com/release/templates/handlebars-basics/">Templates</a> – both template-only components, and class-backed components.</p>
+
+<p>Some of the reasons for using a templating language over "just JavaScript"™ are discussed here in this <a href="https://www.youtube.com/watch?v=nXCSloXZ-wc&t=1441s">video from ReactiveConf</a>. There are other reasons as well, but they are beyond the scope of this guide.
+</p>
+
+<p>Like React, Ember makes heavy use of ideas from both functional programming and object-oriented programming, though you'll find they show up in different ways!</p>
+
+<h3 class="border-bottom">Component Patterns</h3>
+Next, let's look at four types of component patterns: presentational/stateless components, container components, higher-order components, and contextual components.
+
+<h4>Presentational or "Stateless" Components</h4>
+<p>Presentational components only display or format data. They do not have state, do not make requests, and do not cause side-effects within the app without being passed a function to do so.</p>
+<p>Presentational components are one half of a common design pattern in component-driven interfaces, where behavior is separated from what displays the result of the behavior. These are most commonly referred to as container and presentational components. However, a container component with state does not need to exist in order to use a presentational component. A presentational component could be thought of as a <a href="https://en.wikipedia.org/wiki/Pure_function" rel="external">Pure Function</a> in that the output is always the same for any given set of inputs. The presentational component may have logic for controlling what is displayed when, but it does not maintain the state that backs the logic. Icon component libraries are an example of presentational components.</p>
+
+<p>The example below shows a logic-less, presentational component that will be rendered with some static data:</p>
+
+<pre><code>// presentation.jsx
+import React from 'react';
+
+export function Presentation({ message, response }) {
+  return (
+    &lt;&gt;
+      Obi Wan Kenobi: {message}
+      General Grievous: {response}
+    &lt;/&gt; 
+  );
+}
+</code></pre>
+
+<pre><code>&sol;&sol; invocation.jsx
+&lt;Presentation
+  message={&lsquo;Hello There!&rsquo;}
+  response={&lsquo;General Kenobi!!&rsquo;}
+/&gt;
+</code></pre>
+
+<p>In <code>presentation.jsx</code> the component receives two arguments which are then rendered. We see that in <code>invocation.jsx</code> those arguments are assigned to static values, so the rendered result will be:</p>
+<div>
+Obi Wan Kenobi: Hello There!
+General Grievous: General Kenobi!!
+</div>
+
+<p>The same pattern would be written this way in Ember:</p>
+
+<pre><code>&lt;!-- presentation/template.hbs -->
+&lt;>Obi Wan Kenobi: {{@message}}&lt;/p>
+&lt;p>General Grievous: {{@response}}&lt;/p>
+</code></pre>
+
+<pre><code>&lt;!-- invocation/template.hbs -->
+&lt;Presentation 
+  @message=&lsquo;Hello There!&rsquo; 
+  @response=&lsquo;General Kenobi!!&rsquo;
+/&gt;
+</code></pre>
+
+<h4>Container Components</h4>
+<p>Container components provide functionality to the wrapping content without adding any markup to the DOM. These are also known as "Renderless Components". They may also be higher-order components, but in React, a Higher-Order Component is a little more specific than the Container component concept.
+</p>
+<p>The following example may be something used to manage the open or closed state of a modal.</p>
+
+<pre><code>// modal-state.jsx
+
+import React, { useState, useCallback } from &lsquo;react&rsquo;;
+
+export function ModalState({ children }) {
+  const [isActive, setIsActive] = useState(false);
+  const toggle = useCallback(() => setIsActive(!isActive), [isActive]);
+  const close = () => setIsActive(false);
+  const open = () => setIsActive(true);
+  
+  return children({
+    isActive,
+    actions: {
+      toggle, close, open
+    }
+  });
+} 
+</code></pre>
+
+<p>Using React's hooks, we just set up some state and callbacks to provide to any child components that may want to use an open/close state.</p>
+
+<pre><code>// usage.jsx
+
+&lt;ModalState&gt;
+  {({ isActive, actions }) =&gt; {
+    return (
+      &lt;AskAQuestion isActive={isActive} close={actions.close} /&gt;
+    );
+  }}
+&lt;/ModalState&gt;
+</code></pre>
+
+<h4>Higher-Order Components</h4>
+<p>Higher-Order components are functions that take a component as an argument and return a new component wrapping the passed component with some additional functionality. 
+</p>
+
+<p>In Ember, a higher-order component is something different. Read <a href="https://v4.chriskrycho.com/2018/higher-order-components-in-emberjs.html" rel="external">Higher-Order Components in Ember.js</a> by Chris Krycho, or watch (the very funny) talk by Miguel Camba, <a href="https://www.youtube.com/watch?v=MpFudGJn2J0" rel="external">Higher Order Components</a>.</p>
+
+<p>Ember doesn't have the same concept as React's higher-order components. There are tradeoffs here, so let's examine those.</p>
+
+<p>The inconvenience (in Ember) is that you have to be slightly more verbose with your reuse as you need to specify the argument keys in addition to the value, where as with higher-order components in React, they are implicitly given to your wrapped component.</p>
+
+<p>However, this use of higher-order components makes it hard to track down where props are coming from, an inconvenience for React. It's also why (in-part) React has been encouraging hooks. Ember has not adopted this pattern, because Ember is striving for code to be discoverable, especially to those who may be unfamiliar with Ember in general. Ember's goal is to make it clear and easy to "go to definition", and higher-order functions would detract from that.</p>
+
+<h4>Contextual Components</h4>
+
+<p>Contextual components are useful when you have a set of components that need to be used together, and you want consistent invocation / style / interaction between that set of components. Contextual components are an Ember concept; the closest translation to the idea is Compound Components. Because the components are nothing more than module exports, the static properties of related components can be tacked on to the main export of a component.</p>
+
+<h3>Templates and JSX</h3>
+<p>Templates in Ember are not "Just JavaScript" like JSX. Ember templates build on HTML (a template that is only HTML is completely valid), or rather, a superset of HTML.</p> 
+  
+<p>One of the benefits of JSX is that by leveraging JavaScript, it's very clear where variables and event handlers come from. In larger components being able to "Go-to definition" by either hotkey or click combination to find the definition of the property or function is essential to learning the flow of data. An IDE or editor's support of this kind of discovery comes natural with *just* JavaScript support.</p>
+
+<p>Of course, Ember has a entire framework of features right out of the box, so the developer's IDE needs a few addditional plugins to achieve a similar experience- two important ones are <a href="https://marketplace.visualstudio.com/items?itemName=lifeart.vscode-ember-unstable">Ember Language Server</a>, and <a href="https://marketplace.visualstudio.com/items?itemName=andrejunges.Handlebars">Handlebars</a>. ‌</p>
+
+<p>Aside from editor-feature differences, there are a number of technical reasons that Ember uses templates over JavaScript. First, templates are statically analyzable and can be transformed and/or modified at build time. Second, templates are compiled down to a binary format that makes the compiled size that is <em>much</em> smaller than gzipped and minified JavaScript. The binary format also allows for the user's browser to read and evaluate the template much faster than JavaScript as JavaScript needs to be parsed and compiled by the browser before it can be evaluated. Finally, templates allow you to use all the features of the web. HTML attributes can be separated from component arguments through use of <code>...attributes</code>, and all the attributes you find in HTML (or SVG) documentation <em>just work</em>. There's no need to try to translate anything in your head before you write it.</p>
+
+<p>For more information on the benefits of the templating language that ember uses, there is this talk that Tom Dale gave at <a href="https://www.youtube.com/watch?v=nXCSloXZ-wc">ReactiveConf 2017: Secrets of the Glimmer VM</a>.</p>
+
+<hr />
+
+<p>Have more information to add to this page? Issues and PRs to <a href="https://github.com/melsumner/why-ember">this project's repository</a> are welcome!</p>
 </article>

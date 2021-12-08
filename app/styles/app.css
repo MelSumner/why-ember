@@ -109,6 +109,9 @@ main article {
     width: 90%;
     max-width: 1280px;
   }
+  main article.content-text {
+    max-width: 960px;
+  }
 }
 
 footer {
@@ -180,6 +183,7 @@ h4 {font-size: 1.333rem;}
 @media (min-width:75rem) {
   h4 {
     font-size: 1.777rem;
+    font-weight: bold;
   }
 }
 
@@ -487,10 +491,35 @@ li.fullwidth p a.link-standalone {
   right: 0.25rem;
 }
 
-.has-markdown-doc p img {
-  border: 8px ​solid var(--blue);
-  display: block;
+figure {
+  border: 1px solid var(--orange);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
+  width: 90%;
+}
+@media (min-width: 75rem) {
+  figure {
+    max-width: 75%;
+  }
+}
+figure img {
+  display: inline-block;
   max-width: 100%;
-  width: auto;
+}
+figure figcaption {
+  align-content: center;
+  display: flex;
+  font-size: 0.95rem;
+  justify-content: center;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+/* some prism overrides */
+pre, pre code {
+  white-space: pre-wrap !important;
 }
