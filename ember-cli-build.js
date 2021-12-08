@@ -7,7 +7,7 @@ module.exports = function (defaults) {
     // Add options here
     'ember-prism': {
       theme: 'twilight',
-      components: ['markup', 'handlebars', 'javascript'],
+      components: ['markup', 'handlebars', 'javascript', 'jsx'],
       plugins: ['toolbar', 'copy-to-clipboard'],
     },
   });
