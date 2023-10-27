@@ -1,4 +1,4 @@
-<li class="we-grid-item {{if this.isShowing 'isSelected'}}">
+<li class="we-grid-item {{if this.isShowing 'isSelected'}}" id={{this.itemId}}>
   <p class="we-grid__title">{{@addonName}}</p>
   <button type="button" class="we-grid__button" {{on "click" this.toggleShowing}} aria-label="Read More About {{@addonName}}">
     <span aria-hidden="true">Read More</span>
@@ -9,7 +9,7 @@
   <li class="fullwidth">
     <div class="fullwidth__header-row">
       <p><strong>Why we like {{@addonName}}:</strong></p>
-      <button type="button" class="fullwidth__button-close" {{on "click" this.toggleShowing}}>Close</button>
+      <button type="button" class="fullwidth__button-close" {{on "click" this.closeExpand}}>Close</button>
     </div>
     {{yield}}
     <p>

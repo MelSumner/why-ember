@@ -1,12 +1,21 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
+import { guidFor } from '@ember/object/internals';
 
 export default class WeGridItemComponent extends Component {
-  @tracked isShowing = false;
+  itemId = guidFor(this);
+
+  get isShowing() {
+    return this.itemId === this.args.currentVisible;
+  }
 
   @action
   toggleShowing() {
-    this.isShowing = !this.isShowing;
+    this.args.updateCurrentVisible(this.itemId);
+  }
+
+  @action
+  closeExpand() {
+    this.args.updateCurrentVisible();
   }
 }
