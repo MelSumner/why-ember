@@ -1,0 +1,74 @@
+[
+  { 
+      "addonName": "ember-a11y-refocus", "addonNum": "1", "addonUrl": "https://github.com/ember-a11y/ember-a11y-refocus", "description": "This addon provides accessible route navigation for assistive technology! It does three things: it adds a message letting the screen reader user know that the route has successfully changed; it automatically moves focus to that message, and it provides a bypass mechanism (often called a \"skip link\") so that the user can choose to skip to the page's primary content."
+  },
+  { 
+      "addonName": "ember-concurrency", "addonNum": "2", "addonUrl": "https://github.com/machty/ember-concurrency", "description": "This is <em>the</em> addon that makes it easy to write concise, robust, and beautiful asynchronous code. It provides you with a powerful Task primitive, which...well, go read about it! It's one of the most popular Ember addons for a reason."
+  },
+  { 
+      "addonName": "ember-cli-typescript", "addonNum": "3", "addonUrl": "https://github.com/typed-ember/ember-cli-typescript", "description": "This addon helps you to embrace the power of typescript in your Ember apps. As <a href=\"github.com/gitKrystan\" rel=\"external\">Krystan Huffmenne</a> says... typed Ember extends confidence! (<a href=\"https://www.youtube.com/watch?v=YnYay0NWl38\" rel=\"external\">watch the video</a>)"
+  },
+  { 
+      "addonName": "ember-a11y-testing", "addonNum": "4", "addonUrl": "https://github.com/ember-a11y/ember-a11y-testing", "description": "This addon is a wrapper around Deque Labs' axe-core accessibility testing engine. It integrates into your testing environment using either a one-time setup, or in individual tests using an a11yAudit() test helper."
+  },
+  { 
+      "addonName": "ember-animated", "addonNum": "5", "addonUrl": "https://github.com/ember-animation/ember-animated", "description": "This addon adds animation with minimal changes to your existing application code. It's relatively straight-forward to implement and won't get in the way of accessible routing"  
+  },
+  { 
+      "addonName": "ember-cli-autoprefixer", "addonNum": "6", "addonUrl": "https://github.com/kimroen/ember-cli-autoprefixer", "description": "This addon runs the styles of your Ember app through Autoprefixer, so that's one less thing for you to worry about!"
+  },
+  { 
+      "addonName": "a11y-disabled-modifier", "addonNum": "7", "addonUrl": "https://github.com/chriskrycho/a11y-disabled-modifier", "description": "Most of the time, you shouldn't use this at all; provide feedback on form submission instead! But if you absolutely MUST, this addon provides an accessible way to disable buttons programmatically."
+  },
+  { 
+      "addonName": "ember-cli-sass", "addonNum": "8", "addonUrl": "https://github.com/adopted-ember-addons/ember-cli-sass", "description": "This long-lived Ember addon helps you add the power of scss/sass to your Ember apps, with all the bells and whistles you've come to expect."
+  },
+  { 
+      "addonName": "ember-engines", "addonNum": "9", "addonUrl": "https://github.com/ember-engines/ember-engines", "description": "Engines allow multiple logical applications to be composed together into a single application from the user's perspective...super useful!"
+  },
+  { 
+      "addonName": "ember-intl", "addonNum": "10", "addonUrl": "https://github.com/ember-intl/ember-intl", "description": "This is a localization library for any Ember App or Addon- make it easier to make your app extend its global reach! Check for supporting addons that will check for translation string duplicates, too."
+  },
+  { 
+      "addonName": "ember-cookies", "addonNum": "11", "addonUrl": "https://github.com/simplabs/ember-cookies", "description": "Sometimes you need to put cookies in your app. This addon proides a cookies abstraction for Ember.js that works both in the browser as well as with Fastboot on the server."
+  },
+  { 
+      "addonName": "ember-file-upload", "addonNum": "12", "addonUrl": "https://github.com/adopted-ember-addons/ember-file-upload", "description": "The ember-file-upload addon takes the headache out of the file upload feature implementation. Uploads continue in the background, even after a page transition,persisting across routes in your application."
+  },
+  { 
+      "addonName": "ember-highcharts", "addonNum": "13", "addonUrl": "https://github.com/ahmadsoe/ember-highcharts", "description": "There are a few chart options, but we like highcharts because of their specific work on accessibility."
+  },
+  { 
+      "addonName": "ember-keyboard", "addonNum": "14", "addonUrl": "https://github.com/adopted-ember-addons/ember-keyboard", "description": "Add keyboard events to your Ember app."
+  },
+  { 
+      "addonName": "ember-cli-netlify", "addonNum": "15", "addonUrl": "https://github.com/shipshapecode/ember-cli-netlify", "description": "With Ember + Netlify, you can create and deploy a default app in a matter of minutes (under five minutes, we counted!). Use the ember-cli-netlify addon to make sure Netlify understands how your app's routes should work."
+  },
+  { 
+      "addonName": "ember-cli-dependency-lint", "addonNum": "16", "addonUrl": "https://github.com/salsify/ember-cli-dependency-lint", "description": "Dependency management can be frustrating, but this addon eases some of that burden. It adds lint tests that verify only one version of any given addon will be activated in the final built application. Phew!"
+  },
+  { 
+      "addonName": "ember-cli-postcss", "addonNum": "17", "addonUrl": "https://github.com/jeffjewiss/ember-cli-postcss", "description": "Of course, if sass isn't your thing, postcss might be! Use postcss to process your css with a large selection of plug-ins. Useful when combined with tailwind, too!"
+  },
+  { 
+      "addonName": "ember-select-light", "addonNum": "18", "addonUrl": "https://github.com/ember-a11y/ember-select-light", "description": "Sometimes, you just want a simple, native select element that's accessible. Look no further than ember-select-light, all Octane-powered and ready to go."
+  },
+  { 
+      "addonName": "ember-simple-auth", "addonNum": "19", "addonUrl": "https://github.com/simplabs/ember-simple-auth", "description": "I don't always add authentication to my apps, but when I do, I reach for ember-simple-auth. After trying it out, you will too."
+  },
+  { 
+      "addonName": "ember-sortable", "addonNum": "20", "addonUrl": "https://github.com/adopted-ember-addons/ember-sortable", "description": "Have you ever wanted a way to add accessible sorting to your ui? Look no further than ember-sortable. It has keyboard support and the community has done a great job at incremental improvements."
+  },
+  { 
+      "addonName": "empress/field-guide", "addonNum": "21", "addonUrl": "https://github.com/empress/field-guide", "description": "Want an SEO-friendly static site for your design system's documentation site? Field-guide fits seamlessly into your design system, making it simple to provide your users with what they need to use your awesome design system. We think the <a href=\"https://emberjs.com/images/tomsters/empress750w-891c1c271a9ea7f4db1927c71cb28dfc.webp\" rel=\"external\">Empress Zoey</a> is the best Zoey, too."
+  },
+  { 
+      "addonName": "ember-fastboot", "addonNum": "22", "addonUrl": "https://github.com/ember-fastboot/ember-cli-fastboot", "description": "Server-side rendering for your Ember apps. 'Nuff said."
+  },
+  { 
+      "addonName": "ember-validity-modifier", "addonNum": "23", "addonUrl": "https://github.com/sukima/ember-validity-modifier", "description": "A very simple validation addon using a custom modifier. This makes adding custom validations to form elements as simple as adding a modifier to the field along with your own helper or validation function."
+  },
+  { 
+      "addonName": "ember-truth-helpers", "addonNum": "24", "addonUrl": "https://github.com/jmurphyau/ember-truth-helpers", "description": "Ever wished that you could say \"if eq\" in your templates? Well, until it's in Ember by default, add ember-truth-helpers to your app and get all sorts of convenient helpers. Be more productive than ever."
+  }
+]
