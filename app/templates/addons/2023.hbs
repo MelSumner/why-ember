@@ -1,0 +1,16 @@
+{{page-title "Awesome Ember Addons, 2023 Edition"}}
+
+<article>
+  <p class="intro">There are a lot of awesome Ember addons that help making an Ember app easier than ever. Just in time for end-of-year calendar countdowns, here are 24 of the best-loved Ember addons that help make it faster than ever to build a powerful app.</p>
+  
+  <h2>Best-loved Ember addons: the 2023 list</h2>
+  <WeGrid as |G|>
+    {{#each @model.addons as |addon|}}
+      <WeGridItem @addonName={{addon.addonName}} @addonNum={{addon.addonNum}} @addonUrl={{addon.addonUrl}} @updateCurrentVisible={{G.updateCurrentVisible}} @currentVisible={{G.currentVisible}}>
+        {{!-- template-lint-disable no-triple-curlies --}}
+        <p>{{{addon.description}}}</p>
+        {{!-- template-lint-enable no-triple-curlies --}}
+      </WeGridItem>
+    {{/each}}
+  </WeGrid>
+</article>

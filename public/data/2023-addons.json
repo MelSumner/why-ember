@@ -1,0 +1,5 @@
+[
+  { 
+      "addonName": "ember-a11y-refocus", "addonNum": "1", "addonUrl": "https://github.com/ember-a11y/ember-a11y-refocus", "description": "This addon provides accessible route navigation for assistive technology! It does three things: it adds a message letting the screen reader user know that the route has successfully changed; it automatically moves focus to that message, and it provides a bypass mechanism (often called a \"skip link\") so that the user can choose to skip to the page's primary content. It also provides a way to customize the definition of a route transition!"
+  }
+]
