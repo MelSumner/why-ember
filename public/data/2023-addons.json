@@ -48,7 +48,7 @@
     "addonName": "glint",
     "addonNum": "9",
     "addonUrl": "https://github.com/typed-ember/glint",
-    "description": "Ok it's not an addon exactly, but we loved it so much we had to! Glint is a set of tools to aid in developing code that uses the Glimmer VM for rendering, such as Ember.js v3.24+ and GlimmerX projects. Similar to Vetur for Vue projects or Svelte Language Tools, Glint consists of a CLI and a language server to provide feedback and enforce correctness both locally during editing and project-wide in CI."
+    "description": "Ok it's not an addon exactly, but we love it so much we had to include it! Glint is a set of tools to aid in developing code that uses the Glimmer VM for rendering, such as Ember.js v3.24+ and GlimmerX projects. Similar to Vetur for Vue projects or Svelte Language Tools, Glint consists of a CLI and a language server to provide feedback and enforce correctness both locally during editing and project-wide in CI."
   },
   {
     "addonName": "ember-heroicons",
@@ -66,6 +66,6 @@
     "addonName": "ember-cp-validations",
     "addonNum": "12",
     "addonUrl": "https://github.com/adopted-ember-addons/ember-cp-validations",
-    "description": "This addon has so many personal recommendations, I lost track! It provides computed property-based validations...without observers!"
+    "description": "This addon has so many personal recommendations, I lost track! It provides computed property-based validations...without observers (probably why I lost track, haha!)"
   }
 ]
