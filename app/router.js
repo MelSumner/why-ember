@@ -13,5 +13,6 @@ Router.map(function () {
 
   this.route('addons', function () {
     this.route('2021');
+    this.route('2023');
   });
 });

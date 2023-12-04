@@ -1,0 +1,71 @@
+[
+  { 
+      "addonName": "ember-a11y-refocus", "addonNum": "1", "addonUrl": "https://github.com/ember-a11y/ember-a11y-refocus", "description": "This addon provides accessible route navigation for your Ember app! It has lots of features that all add up to an easy win for improved WCAG conformance in your application."
+  },
+  {
+    "addonName": "ember-a11y-testing",
+    "addonNum": "2",
+    "addonUrl": "https://github.com/ember-a11y/ember-a11y-testing",
+    "description": "This addon is a wrapper around Deque Labs' axe-core accessibility testing engine. It integrates into your testing environment using either a one-time setup, or in individual tests using an a11yAudit() test helper."
+  },
+  {
+    "addonName": "ember-intl",
+    "addonNum": "3",
+    "addonUrl": "https://github.com/ember-intl/ember-intl",
+    "description": "This is a localization library for any Ember App or Addon- it makes it easier to extend the global reach of your app! Look for supporting addons that will check for translation string duplicates, too."
+  },
+  {
+    "addonName": "ember-responsive-images",
+    "addonNum": "4",
+    "addonUrl": "https://github.com/simonihmig/ember-responsive-image",
+    "description": "Automatically generate resized images at build-time, optimized for the responsive web, and using components to render them easily as picture elements."
+  },
+  {
+    "addonName": "ember-web-app",
+    "addonNum": "5",
+    "addonUrl": "https://github.com/zonkyio/ember-web-app",
+    "description": "This Ember addon helps you configure and manage the Web App Manifest to create Progressive Web Apps (PWA)."
+  },
+  {
+    "addonName": "ember-animate-css",
+    "addonNum": "6",
+    "addonUrl": "https://github.com/sinankeskin/ember-animate-css",
+    "description": "If you prefer working in templates, and you love pure CSS animations, look no further!"
+  },
+  {
+    "addonName": "ember-animated",
+    "addonNum": "7",
+    "addonUrl": "https://github.com/ember-animation/ember-animated",
+    "description": "This addon adds animation with minimal changes to your existing application code. It's relatively straight-forward to implement and won't get in the way of accessible routing."
+  },
+  {
+    "addonName": "ember-template-imports",
+    "addonNum": "8",
+    "addonUrl": "https://github.com/ember-template-imports/ember-template-imports",
+    "description": "This addon provides the build tooling required to support Ember's next-gen component authoring format: using &lt;template> to allow authoring JavaScript or TypeScript in the same file as templates, while keeping a clear separation between the template language and the JavaScript around it."
+  },
+  {
+    "addonName": "glint",
+    "addonNum": "9",
+    "addonUrl": "https://github.com/typed-ember/glint",
+    "description": "Ok it's not an addon exactly, but we love it so much we had to include it! Glint is a set of tools to aid in developing code that uses the Glimmer VM for rendering, such as Ember.js v3.24+ and GlimmerX projects. Similar to Vetur for Vue projects or Svelte Language Tools, Glint consists of a CLI and a language server to provide feedback and enforce correctness both locally during editing and project-wide in CI."
+  },
+  {
+    "addonName": "ember-heroicons",
+    "addonNum": "10",
+    "addonUrl": "https://github.com/tzellman/ember-heroicons",
+    "description": "This addon makes it super simple to use heroicons in your Ember app! Not only do they render to SVGs, they also prevent potential accessibility issues by adding the aria-hidden attribute! I approve!"
+  },
+  {
+    "addonName": "ember-apply",
+    "addonNum": "11",
+    "addonUrl": "https://github.com/NullVoxPopuli/ember-apply",
+    "description": "Want to use Tailwind in your app but don't want to figure out how to set it up? What about automating the embroider migration from the classic ember build system? This addon is for you!"
+  },
+  {
+    "addonName": "ember-cp-validations",
+    "addonNum": "12",
+    "addonUrl": "https://github.com/adopted-ember-addons/ember-cp-validations",
+    "description": "This addon has so many personal recommendations, I lost track! It provides computed property-based validations...without observers (probably why I lost track, haha!)"
+  }
+]
