@@ -1,6 +1,6 @@
 [
   { 
-      "addonName": "ember-a11y-refocus", "addonNum": "1", "addonUrl": "https://github.com/ember-a11y/ember-a11y-refocus", "description": "This addon provides accessible route navigation for your Ember app! It does three things: adds a message letting the screen reader user know that the route has successfully changed; automatically moves focus to that message, and provides a bypass mechanism (often called a \"skip link\") so that the user can choose to skip to the page's primary content. It also provides a way to customize the definition of a route transition! An easy win for improved WCAG conformance in your application."
+      "addonName": "ember-a11y-refocus", "addonNum": "1", "addonUrl": "https://github.com/ember-a11y/ember-a11y-refocus", "description": "This addon provides accessible route navigation for your Ember app! It has lots of features that all add up to an easy win for improved WCAG conformance in your application."
   },
   {
     "addonName": "ember-a11y-testing",
@@ -12,7 +12,7 @@
     "addonName": "ember-intl",
     "addonNum": "3",
     "addonUrl": "https://github.com/ember-intl/ember-intl",
-    "description": "This is a localization library for any Ember App or Addon- make it easier to make your app extend its global reach! Check for supporting addons that will check for translation string duplicates, too."
+    "description": "This is a localization library for any Ember App or Addon- it makes it easier to extend the global reach of your app! Look for supporting addons that will check for translation string duplicates, too."
   },
   {
     "addonName": "ember-responsive-images",
@@ -42,13 +42,13 @@
     "addonName": "ember-template-imports",
     "addonNum": "8",
     "addonUrl": "https://github.com/ember-template-imports/ember-template-imports",
-    "description": "This addon provides the build tooling required to support Ember's next-gen component authoring format: using \"<template>\" to allow authoring JavaScript or TypeScript in the same file as templates, while keeping a clear separation between the template language and the JavaScript around it."
+    "description": "This addon provides the build tooling required to support Ember's next-gen component authoring format: using &lt;template> to allow authoring JavaScript or TypeScript in the same file as templates, while keeping a clear separation between the template language and the JavaScript around it."
   },
   {
     "addonName": "glint",
     "addonNum": "9",
     "addonUrl": "https://github.com/typed-ember/glint",
-    "description": "Glint is a set of tools to aid in developing code that uses the Glimmer VM for rendering, such as Ember.js v3.24+ and GlimmerX projects. Similar to Vetur for Vue projects or Svelte Language Tools, Glint consists of a CLI and a language server to provide feedback and enforce correctness both locally during editing and project-wide in CI."
+    "description": "Ok it's not an addon exactly, but we loved it so much we had to! Glint is a set of tools to aid in developing code that uses the Glimmer VM for rendering, such as Ember.js v3.24+ and GlimmerX projects. Similar to Vetur for Vue projects or Svelte Language Tools, Glint consists of a CLI and a language server to provide feedback and enforce correctness both locally during editing and project-wide in CI."
   },
   {
     "addonName": "ember-heroicons",
