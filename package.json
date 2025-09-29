@@ -69,6 +69,6 @@
     "ember-cli-netlify": "0.4.1",
     "ember-test-helpers": "0.6.3",
     "highlightjs": "9.16.2",
-    "webpack": "5.65.0"
+    "webpack": "5.102.0"
   }
 }
